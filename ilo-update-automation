@@ -1,0 +1,13 @@
+RESTful Interface Tool
+Summary: Having problems finding a single scripting tool that provides management automation among the server components? Being challenged with many tools, remote management vulnerabilities and scripting limitation? Hewlett Packard Enterprise offers you a single scripting tool called RESTful Interface Tool designed for HPE ProLiant Gen9 (iLO4) & Gen10 (iLO5) Servers with flexible and simpler scripting server automation at scale for rapid deployments to help cut time substantially. The RESTful Interface Tool lets you configure, monitor and update various server components. The tool is agnostic to the iLO RESTful API that is Redfish API conformant with no FW or schema download dependencies, allowing management of iLO, BIOS, Smart Array and firmware updates.
+
+
+Automate updating of iLO5 based systems to version 1.39
+	1. Install the HPE tool "RESTful Interface Tool" from HPE: (https://www.hpe.com/us/en/product-catalog/detail/pip.restful-interface-tool.7630408.html)
+	2. Download iLO5 firmware 1.39 (https://support.hpe.com/hpesc/public/home/driverHome?sp4ts.oid=1010145741)
+	3. Create text file containing  a list of iLO5 IP addresses. E.g., "ip_addresses.txt"
+	4. Save the downloaded firmware file (ilo5_139.fwpkg) and the text file (ip_addresses.txt) to the RESTful Interface Tool directory (C:\Program Files\Hewlett Packard Enterprise\RESTful Interface Tool\)
+	5.  Launch "Administrator: Command Prompt"
+	6. Navigate to the RESTful Interface Tool directory (C:\Program Files\Hewlett Packard Enterprise\RESTful Interface Tool\)
+	7. From the "Administrator: Command Prompt" enter the following command:
+		a. C:\Program Files\Hewlett Packard Enterprise\RESTful Interface Tool>for /F "tokens=*" %A in (ip_addresses.txt) do ilorest flashfwpkg ilo5_143.fwpkg --url %A -u <iLO_username> -p <iLO_password>
