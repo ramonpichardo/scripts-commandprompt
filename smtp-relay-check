@@ -1,0 +1,20 @@
+C:\> telnet mercury.avengers.org 25
+220 OK
+telnet > helo
+250 Hello
+telnet > mail from:messages@mercury.avengers.org
+250 2.1.0 Sender OK
+telnet > rcpt to:tony.stark@starkenterprises.com
+250 2.1.5 Recipient OK
+telnet > data
+354 Start mail input; end with <CRLF>.<CRLF>
+telnet > Subject:Avengers Assemble!
+telnet > 
+telnet > Pizza is here. Hulk looks hungry.
+telnet > 
+telnet > .
+250 2.6.0 Queued mail for delivery
+telnet > quit
+221 2.0.0 Service closing transmission channel
+Connection to host lost.
+C:\> 
