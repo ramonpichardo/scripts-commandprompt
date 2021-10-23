@@ -1,0 +1,8 @@
+Syntax: fsutil file createnew <filename.ext> <file_size_in_bytes>
+
+Examples:
+File Size	- Command String
+1 GB - fsutil file createnew testfile1gb.txt 1073741824
+500 MB - fsutil file createnew testfile500mb.txt 536870912
+128 MB - fsutil file createnew testfile128mb.txt 134217728
+10 MB	- fsutil file createnew testfile10mb.txt 10485760
